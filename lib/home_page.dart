@@ -23,7 +23,7 @@ class MyHomePage extends StatelessWidget {
               'You have pushed the button this many times:',
             ),
             Text(
-              '${viewModel.counter}',
+              '${viewModel.count}',
               style: Theme.of(context).textTheme.headline4,
             ),
           ],
@@ -31,7 +31,7 @@ class MyHomePage extends StatelessWidget {
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: () {
-          viewModel.incrementCount();
+          viewModel.increment();
         },
         tooltip: 'Increment',
         child: const Icon(Icons.add),

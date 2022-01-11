@@ -1,13 +1,18 @@
+import 'package:counter/domain/counter.dart';
 import 'package:flutter/cupertino.dart';
 
 class MainViewModel with ChangeNotifier {
-  int _counter = 0;
+  final Counter _counter;
 
-  int get counter => _counter;
+  MainViewModel(this._counter);
 
-  void incrementCount() {
+  int _count = 0;
+
+  int get count => _count;
+
+  void increment() {
     // 상태 바꾸고
-    _counter++;
+    _count = _counter.increment();
     notifyListeners();
   }
 }
