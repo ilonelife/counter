@@ -1,8 +1,8 @@
-import 'package:counter/domain/counter.dart';
+import 'package:counter/data/repository/count_repository.dart';
 import 'package:flutter/cupertino.dart';
 
 class MainViewModel with ChangeNotifier {
-  final Counter _counter;
+  final CountRepository _counter;
 
   MainViewModel(this._counter);
 
